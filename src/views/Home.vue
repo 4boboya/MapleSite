@@ -56,13 +56,13 @@ header {
   bottom: 0;
   right: 25%;
   transition: all 0.2s linear;
-  filter: drop-shadow(-1px 6px 3px rgba(0, 0, 0, 0.5));
+  box-shadow: 3px 0px 2px #00000050;
 }
 .board-outside {
-  filter: drop-shadow(-1px 6px 3px rgba(0, 0, 0, 0.5));
+  filter: drop-shadow(-1px 6px 3px #00000050);
 
   &:hover {
-    filter: drop-shadow(-1px 6px 3px rgba(0, 0, 0, 0.8));
+    filter: drop-shadow(-1px 6px 3px #00000080);
     text-shadow: 0 0 5px #000;
     animation: hover-board 0.5s linear;
   }
