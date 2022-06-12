@@ -1,15 +1,15 @@
 <template>
   <div class="home">
     <div class="pole">
-      <!-- <div class="board-outside">
+      <div class="board-outside">
         <div class="board board-right board-one">最新消息</div>
-      </div> -->
+      </div>
       <div class="board-outside">
         <div class="board board-left board-two" @click="toPage('/raiders')">楓葉攻略</div>
       </div>
-      <!-- <div class="board-outside">
+      <div class="board-outside">
         <div class="board board-right board-three">楓葉工具</div>
-      </div> -->
+      </div>
     </div>
   </div>
 </template>
