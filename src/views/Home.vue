@@ -1,17 +1,17 @@
 <template>
-  <header>
+  <div class="home">
     <div class="pole">
       <div class="board-outside">
         <div class="board board-right board-one">最新消息</div>
       </div>
       <div class="board-outside">
-        <div class="board board-left board-two">楓葉攻略</div>
+        <div class="board board-left board-two" @click="toPage('/raiders')">楓葉攻略</div>
       </div>
       <div class="board-outside">
         <div class="board board-right board-three">楓葉工具</div>
       </div>
     </div>
-  </header>
+  </div>
 </template>
 
 <style lang="scss" scoped>
@@ -39,19 +39,20 @@
     transform: rotateZ(0deg);
   }
 }
-header {
+.home {
   position: relative;
   width: 100%;
   height: 100vh;
-  background-image: url(https://i.imgur.com/jdePJ9j.gif);
+  background-image: url("/img/Background.gif");
   background-size: cover;
   background-position: bottom right;
 }
 .pole {
   position: absolute;
-  height: 80vh;
+  height: 60vh;
   width: 25px;
-  background-color: #bb5c10;
+  background-image: url("../assets/pole.png");
+  background-size:100% 100%;
   margin-inline: auto;
   bottom: 0;
   right: 25%;
@@ -71,7 +72,7 @@ header {
   position: absolute;
   width: 210px;
   height: 50px;
-  background-color: #bb5c10;
+  background-image: url("../assets/board.png");
   color: #dde3e4;
   display: flex;
   align-items: center;
@@ -114,3 +115,20 @@ header {
   @include board-style(4deg, 170px);
 }
 </style>
+
+<script lang="ts">
+import { defineComponent } from 'vue'
+import { useRouter } from 'vue-router'
+
+export default defineComponent({
+  setup() {
+    const router = useRouter()
+
+    const toPage = (link: string) => {
+      router.push(link)
+    }
+    
+    return { toPage }
+  },
+})
+</script>
